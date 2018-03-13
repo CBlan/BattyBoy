@@ -5,18 +5,13 @@ using UnityEngine;
 public class BatSwing : MonoBehaviour
 {
     public GameObject player;
-    public Transform point;
-    float speed;
-    float swingPower;
-    public float maxSwingPower;
-    float swingPowerPerTime = 1;
 
-    bool hit;
+    public AnimationCurve swingPowerCurve;
+    public float MaxSwingPower = 200;
+    public KeyCode InputBatHit = KeyCode.Space;
 
-    private void Start()
-    {
-        hit = false;
-    }
+    bool Swinging;
+    float BatSwingPower;
 
     private void Update()
     {
@@ -25,71 +20,59 @@ public class BatSwing : MonoBehaviour
 
     void ProcessInput() //process input
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine("HitPower");
-        }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyDown(InputBatHit))
         {
-            print(swingPower);
-            StopCoroutine("HitPower");
-            swingPower = 0f;
-            if(hit == true)
-            {
-                StopCoroutine("SwingTimer");
-                
-            }
-            hit = true;
-            StartCoroutine("SwingTimer");
-            transform.Rotate(90, 0, 0 * Time.deltaTime);
+            StartCoroutine(CalculateHitStrength());
         }
-        
-    }
-    
-
-    void BatSwingAction()
-    {
-        //swings bat
-        transform.Rotate(90, 0, 0);
+        if (Input.GetKeyUp(InputBatHit))
+        {
+            StopCoroutine(CalculateHitStrength());
+            StartCoroutine(Swing());
+        }
     }
 
-    
-
-    public void OnCollisionEnter(Collision other) //detects any hit object
+    public void OnCollisionStay(Collision other) //detects any hit object
     {
-        if (hit == true)
+        if(Swinging)
         {
             if (other.gameObject.CompareTag("HitObject"))
             {
-                print("hit object");
-                other.gameObject.GetComponent<Rigidbody>().AddForce(player.transform.forward * swingPower, ForceMode.Impulse);
+                print("HIT " + other.gameObject);
                 other.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
+                other.gameObject.GetComponent<Rigidbody>().AddForce(player.transform.forward * BatSwingPower, ForceMode.Impulse);
                 other.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
             }
         }
-        
     }
 
-    IEnumerator HitPower() //increases hitpower overtime.
+    IEnumerator CalculateHitStrength() //increases hitpower overtime.
     {
-        swingPower += swingPowerPerTime;
-        if (swingPower > maxSwingPower)
+        float CurveTime = 0f;
+        float CurvePosition = 0f;
+        BatSwingPower = 0f;
+        while (Input.GetKey(InputBatHit))
         {
-            swingPower = maxSwingPower;
+            CurveTime += Time.deltaTime;
+            CurvePosition = swingPowerCurve.Evaluate(CurveTime);
+            BatSwingPower = MaxSwingPower * CurvePosition;
+            yield return null;
         }
-        yield return new WaitForSeconds(0.1f);
-        StartCoroutine("HitPower");
-        yield break;
+
+        print(BatSwingPower);
     }
 
-    IEnumerator SwingTimer()
+    IEnumerator Swing()
     {
-        print("time up");
-        yield return new WaitForSeconds(0.8f);
-        hit = false;
-        transform.Rotate(90, 0, 0 * Time.deltaTime);
+        Swinging = true;
 
+        float timer = 0.6f;
+        while(timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        Swinging = false;
         yield break;
     }
 

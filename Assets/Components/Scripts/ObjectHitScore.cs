@@ -11,7 +11,7 @@ public class ObjectHitScore : MonoBehaviour
     {
         if (beenHit)
         {
-            //ScoreManager.instance.Score(scoreValue); //Give the score tracker(player/game/score manager) and add it.
+            ScoreManager.instance.Score(scoreValue); //Give the score tracker(player/game/score manager) and add it.
             print("I HAVE BEEN HIT!");
             //Destroy(gameObject, 5); //Destroy the gameobject.
         }
