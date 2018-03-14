@@ -9,6 +9,8 @@ public class BatSwing : MonoBehaviour
     public AnimationCurve swingPowerCurve;
     public float MaxSwingPower = 200;
     public KeyCode InputBatHit = KeyCode.Space;
+    public float maxDistance;
+    public GameObject hitObject;
 
     bool Swinging;
     float BatSwingPower;
@@ -16,6 +18,31 @@ public class BatSwing : MonoBehaviour
     private void Update()
     {
         ProcessInput();
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 fwd = Camera.main.transform.TransformDirection(Vector3.forward);
+
+        //if (Physics.Raycast(Camera.main.transform.position, fwd, maxDistance))
+        //{
+        //    print("There is something in front of the object!");
+
+        //}
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit, maxDistance))
+        {
+            Debug.DrawRay(transform.position, fwd, Color.green);
+            if (hit.collider.gameObject.CompareTag("HitObject"))
+            {
+                Debug.Log(hit.collider.gameObject.name);
+                hitObject = hit.collider.gameObject;
+            }
+        }
+
     }
 
     void ProcessInput() //process input
@@ -28,21 +55,17 @@ public class BatSwing : MonoBehaviour
         if (Input.GetKeyUp(InputBatHit))
         {
             StopCoroutine(CalculateHitStrength());
-            StartCoroutine(Swing());
-        }
-    }
 
-    public void OnCollisionStay(Collision other) //detects any hit object
-    {
-        if(Swinging)
-        {
-            if (other.gameObject.CompareTag("HitObject"))
+            if (hitObject != null)
             {
-                print("HIT " + other.gameObject);
-                other.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
-                other.gameObject.GetComponent<Rigidbody>().AddForce(player.transform.forward * BatSwingPower, ForceMode.Impulse);
-                other.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
+                hitObject.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
+                hitObject.gameObject.GetComponent<Rigidbody>().AddForce(player.transform.forward * BatSwingPower, ForceMode.Impulse);
+                hitObject.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
+                hitObject = null;
+                print("object is none");
             }
+
+            StartCoroutine(Swing());
         }
     }
 
@@ -65,13 +88,11 @@ public class BatSwing : MonoBehaviour
     IEnumerator Swing()
     {
         Swinging = true;
-
         float timer = 0.6f;
         while(timer > 0)
         {
             timer -= Time.deltaTime;
         }
-
         Swinging = false;
         yield break;
     }
