@@ -18,4 +18,15 @@ public class ObjectHitScore : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (beenHit)
+        {
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                collision.gameObject.GetComponent<EnemyMovement>().Stunned();
+            }
+        }
+    }
+
 }

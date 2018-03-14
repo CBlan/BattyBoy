@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class EnemyMovement : MonoBehaviour
 {
     public GameObject target;
-    
+
+    public float stunTime;
     public float minDistance; //For hitting/ detection area.
 
     NavMeshAgent navAgent;
@@ -32,9 +33,27 @@ public class EnemyMovement : MonoBehaviour
 
             //if(dst <= minDistance)
             //{
+            //  CapturePlayer();
             //}
         }
     }
 
+    void CapturePlayer()
+    {
 
+    }
+
+    public void Stunned()
+    {
+        print("ENEMY STUNNED! RUN!!!!");
+        navAgent.isStopped = true;
+        StartCoroutine(StunTimer());
+    }
+
+    IEnumerator StunTimer()
+    {
+        yield return new WaitForSeconds(stunTime);
+        navAgent.isStopped = false;
+        yield break;
+    }
 }
