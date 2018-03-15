@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BatSwing : MonoBehaviour
 {
@@ -34,11 +35,21 @@ public class BatSwing : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, hit.point) < 2f)
                 {
-                    Debug.Log(hit.collider.gameObject.name);
                     hitObject = hit.collider.gameObject;
                     debugColor = Color.green;
                 }
             }
+
+            if (hit.collider.gameObject.CompareTag("People"))
+            {
+                if (Vector3.Distance(transform.position, hit.point) < 2f)
+                {
+                    hitObject = hit.collider.gameObject;
+                    debugColor = Color.green;
+                }
+                
+            }
+
         }
         else
         {
@@ -62,11 +73,22 @@ public class BatSwing : MonoBehaviour
 
             if (hitObject != null)
             {
-                hitObject.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
-                hitObject.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
-                hitObject.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
-                hitObject = null;
-                print("object is none");
+
+                if(hitObject.tag == "HitObject")
+                {
+                    hitObject.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
+                    hitObject.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
+                    hitObject.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
+                    hitObject = null;
+                }
+                else if (hitObject.tag == "People")
+                {
+                    hitObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
+                    hitObject.GetComponent<NavMeshAgent>().enabled = false;
+                    hitObject.GetComponent<AIMovement>().enabled = false;
+                    hitObject = null;
+                }
+                
             }
 
             StartCoroutine(Swing());
