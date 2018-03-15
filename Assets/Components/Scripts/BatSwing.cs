@@ -12,8 +12,11 @@ public class BatSwing : MonoBehaviour
     public float maxDistance;
     public GameObject hitObject;
 
+
     bool Swinging;
     float BatSwingPower;
+
+    Color debugColor = Color.red;
 
     private void Update()
     {
@@ -22,44 +25,45 @@ public class BatSwing : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 fwd = Camera.main.transform.TransformDirection(Vector3.forward);
-
-        //if (Physics.Raycast(Camera.main.transform.position, fwd, maxDistance))
-        //{
-        //    print("There is something in front of the object!");
-
-        //}
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, maxDistance))
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+
+        if (Physics.Raycast(ray, out hit, maxDistance))
         {
-            Debug.DrawRay(transform.position, fwd, Color.green);
             if (hit.collider.gameObject.CompareTag("HitObject"))
             {
-                Debug.Log(hit.collider.gameObject.name);
-                hitObject = hit.collider.gameObject;
+                if (Vector3.Distance(transform.position, hit.point) < 2f)
+                {
+                    Debug.Log(hit.collider.gameObject.name);
+                    hitObject = hit.collider.gameObject;
+                    debugColor = Color.green;
+                }
             }
         }
+        else
+        {
+            debugColor = Color.red;
+            hitObject = null;
+        }
 
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 4, debugColor);
     }
 
     void ProcessInput() //process input
     {
 
-        if (Input.GetKeyDown(InputBatHit))
+        if (Input.GetKeyDown(InputBatHit) || Input.GetMouseButtonDown(0))
         {
             StartCoroutine(CalculateHitStrength());
         }
-        if (Input.GetKeyUp(InputBatHit))
+        if (Input.GetKeyUp(InputBatHit) || Input.GetMouseButtonUp(0))
         {
             StopCoroutine(CalculateHitStrength());
 
             if (hitObject != null)
             {
                 hitObject.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
-                hitObject.gameObject.GetComponent<Rigidbody>().AddForce(player.transform.forward * BatSwingPower, ForceMode.Impulse);
+                hitObject.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
                 hitObject.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
                 hitObject = null;
                 print("object is none");
@@ -74,7 +78,7 @@ public class BatSwing : MonoBehaviour
         float CurveTime = 0f;
         float CurvePosition = 0f;
         BatSwingPower = 0f;
-        while (Input.GetKey(InputBatHit))
+        while (Input.GetKey(InputBatHit) || Input.GetMouseButton(0))
         {
             CurveTime += Time.deltaTime;
             CurvePosition = swingPowerCurve.Evaluate(CurveTime);
@@ -96,5 +100,4 @@ public class BatSwing : MonoBehaviour
         Swinging = false;
         yield break;
     }
-
 }
