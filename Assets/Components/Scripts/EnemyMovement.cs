@@ -22,7 +22,12 @@ public class EnemyMovement : MonoBehaviour
 
         if(target != null)
         {
-            transform.LookAt(target.transform);
+
+            Vector3 targetPostition = new Vector3(target.transform.position.x,
+                                        transform.position.y,
+                                        target.transform.position.z);
+            transform.LookAt(targetPostition);
+
             float dst = Vector3.Distance(target.transform.position, transform.position);
 
             if(dst > minDistance)

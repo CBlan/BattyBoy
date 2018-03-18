@@ -15,7 +15,7 @@ public class BatSwing : MonoBehaviour
 
 
     bool Swinging;
-    float BatSwingPower;
+    public float BatSwingPower;
 
     Color debugColor = Color.red;
 
@@ -62,36 +62,62 @@ public class BatSwing : MonoBehaviour
 
     void ProcessInput() //process input
     {
+        #region BatSwing Increase overtime input
+        //if (Input.GetKeyDown(InputBatHit) || Input.GetMouseButtonDown(0))
+        //{
+        //    StartCoroutine(CalculateHitStrength());
+        //}
+        //if (Input.GetKeyUp(InputBatHit) || Input.GetMouseButtonUp(0))
+        //{
+        //    StopCoroutine(CalculateHitStrength());
+
+        //    if (hitObject != null)
+        //    {
+
+        //        if(hitObject.tag == "HitObject")
+        //        {
+        //            hitObject.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
+        //            hitObject.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
+        //            hitObject.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
+        //            hitObject = null;
+        //        }
+        //        else if (hitObject.tag == "People")
+        //        {
+        //            hitObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
+        //            hitObject.GetComponent<NavMeshAgent>().enabled = false;
+        //            hitObject.GetComponent<AIMovement>().enabled = false;
+        //            hitObject = null;
+        //        }
+
+        //    }
+
+        //    StartCoroutine(Swing());
+        //}
+
+        #endregion
+
 
         if (Input.GetKeyDown(InputBatHit) || Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(CalculateHitStrength());
-        }
-        if (Input.GetKeyUp(InputBatHit) || Input.GetMouseButtonUp(0))
-        {
-            StopCoroutine(CalculateHitStrength());
-
             if (hitObject != null)
             {
 
-                if(hitObject.tag == "HitObject")
+                if (hitObject.tag == "HitObject")
                 {
                     hitObject.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
                     hitObject.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
                     hitObject.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
-                    hitObject = null;
+                    //hitObject = null;
                 }
                 else if (hitObject.tag == "People")
                 {
                     hitObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
                     hitObject.GetComponent<NavMeshAgent>().enabled = false;
                     hitObject.GetComponent<AIMovement>().enabled = false;
-                    hitObject = null;
+                    //hitObject = null;
                 }
-                
-            }
 
-            StartCoroutine(Swing());
+            }
         }
     }
 
