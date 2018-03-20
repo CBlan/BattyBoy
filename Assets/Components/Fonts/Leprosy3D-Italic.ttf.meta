@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 4a5c6d4cecebd7c48ad3139fa78bc897
+timeCreated: 1521503992
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Leprosy 3D
+  fontNames:
+  - Leprosy 3D
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 24171403c6c0c3f4ead70eb2c11da4ee, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

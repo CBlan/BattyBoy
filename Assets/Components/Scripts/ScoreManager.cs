@@ -12,13 +12,13 @@ public class ScoreManager : MonoBehaviour
     public void Start()
     {
         instance = this;
-        score.text = "Player Score: " + playerScore.ToString();
+        score.text = "Score: " + playerScore.ToString();
     }
 
     public void Score(int pointsValue)
     {
         playerScore += pointsValue;
-        score.text = "Player Score: " + playerScore.ToString();
+        score.text = "Score: " + playerScore.ToString();
 
     }
 }

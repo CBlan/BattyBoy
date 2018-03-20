@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.49, z: 0}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -102,8 +102,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
-  m_AllowMSAA: 1
+  m_HDR: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -367,7 +367,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1927401336587074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.577, y: -0.321, z: 0.755}
+  m_LocalPosition: {x: 0.577, y: -0.321, z: 0.54}
   m_LocalScale: {x: 0.2, y: 1, z: 0.2}
   m_Children:
   - {fileID: 4732776967332842}
@@ -451,7 +451,7 @@ BoxCollider:
   m_GameObject: {fileID: 1927401336587074}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -487,6 +487,6 @@ MonoBehaviour:
     m_RotationOrder: 0
   MaxSwingPower: 80
   InputBatHit: 32
-  maxDistance: 1
+  maxDistance: 2
   hitObject: {fileID: 0}
   BatSwingPower: 80
