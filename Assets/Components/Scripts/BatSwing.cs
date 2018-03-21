@@ -9,13 +9,14 @@ public class BatSwing : MonoBehaviour
 
     public AnimationCurve swingPowerCurve;
     public float MaxSwingPower = 200;
+    public float BatSwingPower;
+    public float[] swingStrengths;
     public KeyCode InputBatHit = KeyCode.Space;
     public float maxDistance;
     public GameObject hitObject;
 
 
     bool Swinging;
-    public float BatSwingPower;
 
     Color debugColor = Color.red;
 
@@ -99,6 +100,11 @@ public class BatSwing : MonoBehaviour
 
         if (Input.GetKeyDown(InputBatHit) || Input.GetMouseButtonDown(0))
         {
+            if(PauseManager.instance.paused == true)
+            {
+                return;
+            }
+
             if (hitObject != null)
             {
 
@@ -129,6 +135,7 @@ public class BatSwing : MonoBehaviour
                             print("can hit heavy object");
                     }
                     
+                    
                 }
                 else if (hitObject.tag == "People")
                 {
@@ -146,6 +153,19 @@ public class BatSwing : MonoBehaviour
         thing.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
         thing.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
         thing.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
+
+        if(ScoreManager.instance.rank == 1)
+        {
+            BatSwingPower = swingStrengths[0];
+        }
+        if (ScoreManager.instance.rank == 2)
+        {
+            BatSwingPower = swingStrengths[1];
+        }
+        if (ScoreManager.instance.rank == 3)
+        {
+            BatSwingPower = swingStrengths[2];
+        }
     }
 
     IEnumerator CalculateHitStrength() //increases hitpower overtime.

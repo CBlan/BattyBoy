@@ -12514,6 +12514,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114229252436051254, guid: 06c70b5353aaa4e4dac36e83fb9d0d3c,
+        type: 2}
+      propertyPath: swingStrengths.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4235709493701730, guid: 06c70b5353aaa4e4dac36e83fb9d0d3c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12545,6 +12550,21 @@ Prefab:
     - target: {fileID: 4235709493701730, guid: 06c70b5353aaa4e4dac36e83fb9d0d3c, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229252436051254, guid: 06c70b5353aaa4e4dac36e83fb9d0d3c,
+        type: 2}
+      propertyPath: swingStrengths.Array.data[0]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229252436051254, guid: 06c70b5353aaa4e4dac36e83fb9d0d3c,
+        type: 2}
+      propertyPath: swingStrengths.Array.data[1]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229252436051254, guid: 06c70b5353aaa4e4dac36e83fb9d0d3c,
+        type: 2}
+      propertyPath: swingStrengths.Array.data[2]
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06c70b5353aaa4e4dac36e83fb9d0d3c, type: 2}
