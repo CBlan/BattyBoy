@@ -18,7 +18,13 @@ public class BatSwing : MonoBehaviour
 
     bool Swinging;
 
+    Animator anim;
     Color debugColor = Color.red;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -144,7 +150,11 @@ public class BatSwing : MonoBehaviour
                     hitObject.GetComponent<AIMovement>().enabled = false;
                 }
 
+
             }
+
+            anim.SetTrigger("HitTrigger");
+
         }
     }
 

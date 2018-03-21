@@ -12,7 +12,6 @@ public class ScoreManager : MonoBehaviour
 
     //UI Values
     public Text score;
-    public Text rankText;
 
     //Managers
     public static ScoreManager instance;
@@ -20,7 +19,6 @@ public class ScoreManager : MonoBehaviour
 
     public void Start()
     {
-        rankText.text = "Rank 1";
         rank = 1;
         instance = this;
         score.text = "Score: " + playerScore.ToString();
@@ -39,12 +37,10 @@ public class ScoreManager : MonoBehaviour
     {
         if(playerScore > rankValue[0] && playerScore < rankValue[1])
         {
-            rankText.text = "Rank 2";
             rank = 2;
         }
         if(playerScore > rankValue[1])
         {
-            rankText.text = "Final Rank";
             rank = 3;
         }
 
