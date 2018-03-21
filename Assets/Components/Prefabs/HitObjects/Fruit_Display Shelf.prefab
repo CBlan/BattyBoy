@@ -23,7 +23,11 @@ GameObject:
   - component: {fileID: 23849927328495996}
   - component: {fileID: 54099683005902534}
   - component: {fileID: 114994100804473804}
-  - component: {fileID: 64483924404249560}
+  - component: {fileID: 65461468778786570}
+  - component: {fileID: 65559389288930998}
+  - component: {fileID: 65171859098255678}
+  - component: {fileID: 65635222055583012}
+  - component: {fileID: 65047956160000870}
   m_Layer: 0
   m_Name: Fruit_Display Shelf
   m_TagString: HitObject
@@ -37,13 +41,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1265963677141204}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1695626, y: 0.7825918, z: 0}
+  m_LocalRotation: {x: -0, y: 0.7137161, z: -0, w: 0.70043516}
+  m_LocalPosition: {x: -30.30756, y: -3.61, z: -44.683}
   m_LocalScale: {x: 0.016794406, y: 0.030915566, z: 0.030915566}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.076004, z: 0}
 --- !u!23 &23849927328495996
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -100,8 +104,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!64 &64483924404249560
-MeshCollider:
+--- !u!65 &65047956160000870
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -109,11 +113,57 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: e08b9e62a3d702d4186eb9b83348d631, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 50, y: 19.578465, z: 17.20982}
+  m_Center: {x: 0, y: -15.210763, z: -4.131746}
+--- !u!65 &65171859098255678
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265963677141204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 30.622383, z: 0.9871247}
+  m_Center: {x: 0, y: -9.688804, z: -12.243084}
+--- !u!65 &65461468778786570
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265963677141204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 12.588757, z: 30.362345}
+  m_Center: {x: 0, y: -18.705614, z: 2.4445093}
+--- !u!65 &65559389288930998
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265963677141204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 14.508502, z: 1.5955976}
+  m_Center: {x: 0, y: -17.74574, z: 16.827871}
+--- !u!65 &65635222055583012
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265963677141204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 49.999992, y: 26.667276, z: 6.7127385}
+  m_Center: {x: -0.0000000035001104, y: -11.666358, z: -8.566425}
 --- !u!114 &114994100804473804
 MonoBehaviour:
   m_ObjectHideFlags: 1
