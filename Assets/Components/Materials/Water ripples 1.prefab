@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 136742285730281868}
   - component: {fileID: 23982505108193748}
   m_Layer: 0
-  m_Name: Water ripples
+  m_Name: Water ripples 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

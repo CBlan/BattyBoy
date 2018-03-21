@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23466221122884452}
   - component: {fileID: 54744186151084266}
   - component: {fileID: 114225479508569976}
-  - component: {fileID: 64496053310106094}
+  - component: {fileID: 65222806086560156}
+  - component: {fileID: 65206023107138510}
   m_Layer: 0
   m_Name: BusStop Sign
   m_TagString: HitObject
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671024343366498}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.5170245, y: 1.585558, z: 4.104783}
+  m_LocalPosition: {x: 4.4361897, y: -2.924465, z: -120.13788}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,8 +101,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!64 &64496053310106094
-MeshCollider:
+--- !u!65 &65206023107138510
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -109,11 +110,21 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: f80a0b3c8f6e3f64795e0ab378c189a0, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 46.31996, y: 66.04042, z: 3.3398643}
+  m_Center: {x: 0, y: 124.533226, z: 3.246928}
+--- !u!65 &65222806086560156
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671024343366498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.531021, y: 307.53012, z: 9.83372}
+  m_Center: {x: -0.45223236, y: -3.7884295, z: 0.00000037252903}
 --- !u!114 &114225479508569976
 MonoBehaviour:
   m_ObjectHideFlags: 1
