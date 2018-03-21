@@ -31,7 +31,7 @@ public class BatSwing : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, maxDistance))
         {
-            if (hit.collider.gameObject.CompareTag("HitObject"))
+            if (hit.collider.gameObject.CompareTag("LightObject") || hit.collider.gameObject.CompareTag("MediumObject") || hit.collider.gameObject.CompareTag("HeavyObject"))
             {
                 if (Vector3.Distance(transform.position, hit.point) < 2f)
                 {
@@ -102,23 +102,50 @@ public class BatSwing : MonoBehaviour
             if (hitObject != null)
             {
 
-                if (hitObject.tag == "HitObject")
+                if (hitObject.tag == "LightObject" || hitObject.tag == "MediumObject" || hitObject.tag == "HeavyObject")
                 {
-                    hitObject.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
-                    hitObject.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
-                    hitObject.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
-                    //hitObject = null;
+                    if(ScoreManager.instance.rank == 1)
+                    {
+                        print("rank 1");
+                        if(hitObject.tag == "LightObject")
+                        {
+                            HitOtherObject(hitObject);
+                            print("can hit light object");
+                        }
+                    }
+
+                    if(ScoreManager.instance.rank == 2)
+                    {
+                        if (hitObject.tag != "HeavyObject")
+                        {
+                            HitOtherObject(hitObject);
+                            print("can hit medium object");
+                        }
+                    }
+
+                    if (ScoreManager.instance.rank == 3)
+                    {
+                            HitOtherObject(hitObject);
+                            print("can hit heavy object");
+                    }
+                    
                 }
                 else if (hitObject.tag == "People")
                 {
                     hitObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
                     hitObject.GetComponent<NavMeshAgent>().enabled = false;
                     hitObject.GetComponent<AIMovement>().enabled = false;
-                    //hitObject = null;
                 }
 
             }
         }
+    }
+
+    void HitOtherObject(GameObject thing)
+    {
+        thing.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
+        thing.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
+        thing.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
     }
 
     IEnumerator CalculateHitStrength() //increases hitpower overtime.

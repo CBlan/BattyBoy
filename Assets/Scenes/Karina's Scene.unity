@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 57068479}
   m_Layer: 0
   m_Name: Object (13)
-  m_TagString: HitObject
+  m_TagString: LightObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a0eaed6dd2492874496edc051e1f7eef, type: 2}
+  - {fileID: 2100000, guid: 089f47df67644184a857417432ccf4f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 497061746}
   m_Layer: 0
   m_Name: Object (5)
-  m_TagString: HitObject
+  m_TagString: MediumObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 516536229}
   m_Layer: 0
   m_Name: Object (4)
-  m_TagString: HitObject
+  m_TagString: MediumObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1288,7 +1288,7 @@ GameObject:
   - component: {fileID: 786311155}
   m_Layer: 0
   m_Name: Object (17)
-  m_TagString: HitObject
+  m_TagString: HeavyObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1348,7 +1348,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a0eaed6dd2492874496edc051e1f7eef, type: 2}
+  - {fileID: 2100000, guid: 7c43bbbaf84c5d7478b982af268cdd45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1402,7 +1402,7 @@ GameObject:
   - component: {fileID: 805427389}
   m_Layer: 0
   m_Name: Object (15)
-  m_TagString: HitObject
+  m_TagString: LightObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1462,7 +1462,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a0eaed6dd2492874496edc051e1f7eef, type: 2}
+  - {fileID: 2100000, guid: 089f47df67644184a857417432ccf4f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1604,7 +1604,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13514
+  m_Name: pb_Mesh18696
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -1794,6 +1794,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1723791039}
+  - {fileID: 1739383433}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1874,7 +1875,7 @@ GameObject:
   - component: {fileID: 1061591742}
   m_Layer: 0
   m_Name: Object (3)
-  m_TagString: HitObject
+  m_TagString: MediumObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2118,7 +2119,7 @@ GameObject:
   - component: {fileID: 1096143578}
   m_Layer: 0
   m_Name: Object (8)
-  m_TagString: HitObject
+  m_TagString: LightObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2165,7 +2166,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a0eaed6dd2492874496edc051e1f7eef, type: 2}
+  - {fileID: 2100000, guid: 089f47df67644184a857417432ccf4f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2232,7 +2233,7 @@ GameObject:
   - component: {fileID: 1107518905}
   m_Layer: 0
   m_Name: Object (9)
-  m_TagString: HitObject
+  m_TagString: MediumObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6545,7 +6546,7 @@ GameObject:
   - component: {fileID: 1363432844}
   m_Layer: 0
   m_Name: Object (12)
-  m_TagString: HitObject
+  m_TagString: MediumObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6659,7 +6660,7 @@ GameObject:
   - component: {fileID: 1456502238}
   m_Layer: 0
   m_Name: Object (1)
-  m_TagString: HitObject
+  m_TagString: HeavyObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6706,7 +6707,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a0eaed6dd2492874496edc051e1f7eef, type: 2}
+  - {fileID: 2100000, guid: 7c43bbbaf84c5d7478b982af268cdd45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7177,7 +7178,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13458
+  m_Name: pb_Mesh18420
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -7317,7 +7318,7 @@ GameObject:
   - component: {fileID: 1556203063}
   m_Layer: 0
   m_Name: Object (16)
-  m_TagString: HitObject
+  m_TagString: HeavyObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7377,7 +7378,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a0eaed6dd2492874496edc051e1f7eef, type: 2}
+  - {fileID: 2100000, guid: 7c43bbbaf84c5d7478b982af268cdd45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7431,7 +7432,7 @@ GameObject:
   - component: {fileID: 1557696122}
   m_Layer: 0
   m_Name: Object (14)
-  m_TagString: HitObject
+  m_TagString: MediumObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7550,7 +7551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1616334283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8062,7 +8063,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh11304
+  m_Name: pb_Mesh18590
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -8261,6 +8262,80 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1739383430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1739383433}
+  - component: {fileID: 1739383432}
+  - component: {fileID: 1739383431}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1739383431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739383430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4705882, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: f79c0638c9ad24986acd8d34c0e20256, type: 3}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Rank
+--- !u!222 &1739383432
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739383430}
+--- !u!224 &1739383433
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739383430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1059469828}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.8587482}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1768122908
 Prefab:
   m_ObjectHideFlags: 0
@@ -8299,6 +8374,10 @@ Prefab:
     - target: {fileID: 4156376757464612, guid: 1befe76ed8f9b7741bf017d4e6368340, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755179834826608, guid: 1befe76ed8f9b7741bf017d4e6368340, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1befe76ed8f9b7741bf017d4e6368340, type: 2}
@@ -8380,7 +8459,7 @@ GameObject:
   - component: {fileID: 1866369819}
   m_Layer: 0
   m_Name: Object (11)
-  m_TagString: HitObject
+  m_TagString: MediumObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8879,7 +8958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1890245224
 Transform:
   m_ObjectHideFlags: 0
@@ -11268,7 +11347,7 @@ GameObject:
   - component: {fileID: 1969876737}
   m_Layer: 0
   m_Name: Object (6)
-  m_TagString: HitObject
+  m_TagString: MediumObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12154,7 +12233,7 @@ GameObject:
   - component: {fileID: 1997366218}
   m_Layer: 0
   m_Name: Object (10)
-  m_TagString: HitObject
+  m_TagString: LightObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12214,7 +12293,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a0eaed6dd2492874496edc051e1f7eef, type: 2}
+  - {fileID: 2100000, guid: 089f47df67644184a857417432ccf4f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12294,13 +12373,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: 0
+  rank: 0
+  rankValue: 320000002c010000
   score: {fileID: 1723791037}
+  rankText: {fileID: 1739383431}
 --- !u!43 &2054778846
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13530
+  m_Name: pb_Mesh18744
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -12511,6 +12593,10 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 921640356}
+    - target: {fileID: 1843805585828604, guid: 81ed976ea86d3e9479add3b36448cd02, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81ed976ea86d3e9479add3b36448cd02, type: 2}
   m_IsPrefabParent: 0
@@ -12529,7 +12615,7 @@ GameObject:
   - component: {fileID: 2135373101}
   m_Layer: 0
   m_Name: Object (7)
-  m_TagString: HitObject
+  m_TagString: MediumObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
