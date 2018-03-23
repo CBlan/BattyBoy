@@ -11,15 +11,28 @@ public class TimeManager : MonoBehaviour
     public Text timerText;
     public GameObject timeUpPanel;
 
+    public bool hasMoved;
+
 	void Start ()
     {
+        hasMoved = false;
         currentTime = timeValue;
         timerText.text = currentTime.ToString("00:00");
+        timerText.enabled = false;
 	}
 	
 	void Update ()
     {
-        if(currentTime > 0)
+        float inputX = Input.GetAxis("Horizontal");
+        float inputY = Input.GetAxis("Vertical");
+
+        if (inputX != 0 || inputY != 0)
+        {
+            hasMoved = true;
+            timerText.enabled = true;
+        }
+
+        if (currentTime > 0 && hasMoved)
         {
             ProcessTime();
         }
@@ -41,7 +54,6 @@ public class TimeManager : MonoBehaviour
         //GUI.Label(new Rect(10, 10, 250, 100), minutes + ":" + seconds);
 
         timerText.text = minutes + ":" + seconds;
-
 
 
         //timerText.text = currentTime.ToString("00:00");

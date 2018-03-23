@@ -94,7 +94,7 @@ public class FirstPersonDrifter: MonoBehaviour
  
             if( enableRunning )
             {
-            	speed = Input.GetButton("Run")? runSpeed : walkSpeed;
+            	speed = Input.GetButton("Fire3")? runSpeed : walkSpeed;
             }
  
             // If sliding (and it's allowed), or if we're on an object tagged "Slide", get a vector pointing down the slope we're on
