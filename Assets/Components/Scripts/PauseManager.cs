@@ -31,10 +31,14 @@ public class PauseManager : MonoBehaviour
 
         if (paused)
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
             Time.timeScale = 0f;
         }
         else
         {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1f;
         }
     }
