@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23059924603688234}
   - component: {fileID: 54150483155860462}
   - component: {fileID: 114422885899399462}
-  - component: {fileID: 64478697908465532}
+  - component: {fileID: 135440943345770228}
   m_Layer: 0
   m_Name: Fruit_Onion
   m_TagString: LightObject
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809293628707030}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.216116, y: -3.7595193, z: -34.85146}
+  m_LocalPosition: {x: -30.02398, y: -3.9180074, z: -34.874565}
   m_LocalScale: {x: 0.001932037, y: 0.001932037, z: 0.001932037}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,20 +100,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!64 &64478697908465532
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1809293628707030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 246048649a97d1a49a575fd61cf437b3, type: 3}
 --- !u!114 &114422885899399462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,3 +113,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   beenHit: 0
+--- !u!135 &135440943345770228
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1809293628707030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 53.148434
+  m_Center: {x: 0.0000038563344, y: 1.2292143, z: -0.000007712669}

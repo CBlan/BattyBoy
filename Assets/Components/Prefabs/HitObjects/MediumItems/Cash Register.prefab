@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54209566555150972}
   m_Layer: 0
   m_Name: Cash Register
-  m_TagString: MediumObject
+  m_TagString: LightObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,8 +37,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1535810569895604}
-  m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 5.3562465, y: 1.4, z: 25.563753}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 14.9, y: 1.4, z: 1.93}
   m_LocalScale: {x: 0.014483159, y: 0.014483152, z: 0.014483159}
   m_Children: []
   m_Father: {fileID: 0}

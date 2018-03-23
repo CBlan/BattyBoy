@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23523994062204478}
   - component: {fileID: 54413900962189732}
   - component: {fileID: 114170572673722430}
-  - component: {fileID: 64012286736491170}
+  - component: {fileID: 135865163880072772}
   m_Layer: 0
   m_Name: Fruit_Mushroom
   m_TagString: LightObject
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1655211386557022}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.73942, y: -3.787975, z: -42.39487}
+  m_LocalPosition: {x: -32.52787, y: -4.0858526, z: -42.04311}
   m_LocalScale: {x: 0.0017529428, y: 0.0017529428, z: 0.0017529428}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,20 +100,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!64 &64012286736491170
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1655211386557022}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: -1
-  m_SkinWidth: 1.00000005e-20
-  m_Mesh: {fileID: 4300000, guid: 9f04a3623df602540a75fd74868d8d91, type: 3}
 --- !u!114 &114170572673722430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,3 +113,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   beenHit: 0
+--- !u!135 &135865163880072772
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1655211386557022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 43.5
+  m_Center: {x: -1.1496067, y: 5.752159, z: -0.000005722046}
