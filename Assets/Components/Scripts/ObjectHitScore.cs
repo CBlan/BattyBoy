@@ -6,6 +6,8 @@ public class ObjectHitScore : MonoBehaviour
 {
     public int scoreValue; //Point value
     public bool beenHit;
+    public float timeToDestroy = 8f;
+    public GameObject destroyEffect;
 
     public void ScoreAndDestroy()
     {
@@ -14,8 +16,9 @@ public class ObjectHitScore : MonoBehaviour
 
             ScoreManager.instance.Score(scoreValue); //Give the score tracker(player/game/score manager) and add it.
             ScoreManager.instance.RankUp();
-            print("I HAVE BEEN HIT!");
-            Destroy(gameObject, 5); //Destroy the gameobject.
+            //print("I HAVE BEEN HIT!");
+            StartCoroutine("DestroyItem");
+            //Destroy(gameObject, 5); //Destroy the gameobject.
         }
         
     }
@@ -53,6 +56,14 @@ public class ObjectHitScore : MonoBehaviour
                 
             }
         }
+    }
+
+    IEnumerator DestroyItem()
+    {
+        yield return new WaitForSeconds(timeToDestroy-1f);
+        Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 
 }

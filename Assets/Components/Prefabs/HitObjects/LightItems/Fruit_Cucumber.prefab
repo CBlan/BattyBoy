@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23202793065015132}
   - component: {fileID: 54949529804447448}
   - component: {fileID: 114593399843156770}
-  - component: {fileID: 64367786178559764}
+  - component: {fileID: 136919505785383422}
   m_Layer: 0
   m_Name: Fruit_Cucumber
   m_TagString: LightObject
@@ -37,9 +37,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1690069825057452}
-  m_LocalRotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -31.716496, y: -3.7712207, z: -43.141224}
-  m_LocalScale: {x: 0.047809184, y: 0.4043113, z: 0.046536077}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -31.623257, y: -3.9809532, z: -42.77735}
+  m_LocalScale: {x: 0.047809213, y: 0.40431154, z: 0.046536077}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,20 +100,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!64 &64367786178559764
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690069825057452}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3dd078283f9dcc44d8e7d90a944a3c2c, type: 3}
 --- !u!114 &114593399843156770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,3 +113,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   beenHit: 0
+  timeToDestroy: 8
+  destroyEffect: {fileID: 1147538616209856, guid: ffcb4a53b7e3e18428102187da7f7243,
+    type: 2}
+--- !u!136 &136919505785383422
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690069825057452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4922166
+  m_Height: 1.1765665
+  m_Direction: 1
+  m_Center: {x: -0.0077834744, y: -6.9131123e-18, z: 0.007783577}

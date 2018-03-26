@@ -236,3 +236,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   beenHit: 0
+  timeToDestroy: 8
+  destroyEffect: {fileID: 1147538616209856, guid: ffcb4a53b7e3e18428102187da7f7243,
+    type: 2}

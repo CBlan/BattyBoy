@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4213749627992022}
   - component: {fileID: 198092610818778610}
   - component: {fileID: 199458716757649016}
+  - component: {fileID: 114609200249937556}
   m_Layer: 0
   m_Name: SmokeEffect
   m_TagString: Untagged
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114609200249937556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1147538616209856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 785932e08880f6540a5d8c537ede11fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198092610818778610
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -101,7 +113,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1920679880
+  randomSeed: -1166378975
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -503,7 +515,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -1
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -544,7 +556,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 4
+    type: 0
     angle: 1
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -661,7 +673,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 20
       minScalar: 10
       maxCurve:
         serializedVersion: 2

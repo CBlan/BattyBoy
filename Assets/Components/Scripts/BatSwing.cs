@@ -22,6 +22,8 @@ public class BatSwing : MonoBehaviour
     public Sprite cantHitImage;
     public Image crossHair;
 
+    public GameObject hitEffect;
+
 
     bool Swinging;
 
@@ -162,11 +164,11 @@ public class BatSwing : MonoBehaviour
                 {
                     if(ScoreManager.instance.rank == 1)
                     {
-                        print("rank 1");
+                        //print("rank 1");
                         if(hitObject.tag == "LightObject")
                         {
                             HitOtherObject(hitObject);
-                            print("can hit light object");
+                            //print("can hit light object");
                         }
                     }
 
@@ -175,14 +177,14 @@ public class BatSwing : MonoBehaviour
                         if (hitObject.tag != "HeavyObject")
                         {
                             HitOtherObject(hitObject);
-                            print("can hit medium object");
+                            //print("can hit medium object");
                         }
                     }
 
                     if (ScoreManager.instance.rank == 3)
                     {
                         HitOtherObject(hitObject);
-                        print("can hit heavy object");
+                        //print("can hit heavy object");
                     }
 
 
@@ -205,6 +207,7 @@ public class BatSwing : MonoBehaviour
 
     void HitOtherObject(GameObject thing)
     {
+        Instantiate(hitEffect, thing.transform.position, Quaternion.identity);
         thing.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
         thing.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
         thing.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();
