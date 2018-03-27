@@ -534,12 +534,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  MaxSwingPower: 80
+  MaxSwingPower: 10000
   BatSwingPower: 80
   swingStrengths:
-  - 30
-  - 50
-  - 80
+  - 100
+  - 200
+  - 300
   maxDistance: 2
   hitObject: {fileID: 0}
   flameEffect: {fileID: 198730235080198400}

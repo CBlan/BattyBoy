@@ -64,11 +64,13 @@ public class TimeManager : MonoBehaviour
         {
             currentTime = 0;
             TimeUp();
+            ScoreManager.instance.GameOver();
         }
     }
 
     void TimeUp()
     {
+        PauseManager.instance.PauseGame();
         timeUpPanel.SetActive(true);
         
     }

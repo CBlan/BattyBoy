@@ -76,7 +76,7 @@ public class BatSwing : MonoBehaviour
                         crossHair.sprite = canHitImage;
                     }
 
-                    else if (ScoreManager.instance.rank == 2 && hitObject.tag == "LightObject" || hitObject.tag == "MediumObject")
+                    else if (ScoreManager.instance.rank == 2 && (hitObject.tag == "LightObject" || hitObject.tag == "MediumObject"))
                     {
                         crossHair.sprite = canHitImage;
                     }
