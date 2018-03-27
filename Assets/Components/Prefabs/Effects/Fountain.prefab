@@ -71,8 +71,7 @@ GameObject:
   - component: {fileID: 4576504733165278}
   - component: {fileID: 33875134249407134}
   - component: {fileID: 23830364763974690}
-  - component: {fileID: 95415398121048536}
-  - component: {fileID: 65000677573165642}
+  - component: {fileID: 64045553888561016}
   m_Layer: 0
   m_Name: mall fountain
   m_TagString: Untagged
@@ -304,13 +303,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162016112791734}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -11.47, y: -0.91, z: -0.81}
+  m_LocalRotation: {x: -0, y: 0.89778686, z: -0, w: 0.4404302}
+  m_LocalPosition: {x: -11.47, y: -0.91, z: -0.782}
   m_LocalScale: {x: 0.33699298, y: 0.33699304, z: 0.336993}
   m_Children: []
   m_Father: {fileID: 4643312395687170}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 127.73701, z: 0}
 --- !u!4 &4067182333483770
 Transform:
   m_ObjectHideFlags: 1
@@ -345,7 +344,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742337532795046}
   m_LocalRotation: {x: -0, y: -0.98166084, z: -0, w: 0.19063587}
-  m_LocalPosition: {x: -11.15, y: -0.9100001, z: -1.36}
+  m_LocalPosition: {x: -11.15, y: -1.053, z: -1.057}
   m_LocalScale: {x: 0.33699012, y: 0.33699, z: 0.33699012}
   m_Children: []
   m_Father: {fileID: 4643312395687170}
@@ -461,13 +460,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1707866518289992}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -11.47, y: -0.9100001, z: -1.71}
+  m_LocalRotation: {x: 0.0000000053843836, y: -0.55269426, z: 0.0000000069464825,
+    w: 0.83338416}
+  m_LocalPosition: {x: -11.51, y: -0.29, z: -1.59}
   m_LocalScale: {x: 0.33699012, y: 0.33699, z: 0.33699012}
   m_Children: []
   m_Father: {fileID: 4643312395687170}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -67.104004, z: 0}
 --- !u!4 &4832458906689526
 Transform:
   m_ObjectHideFlags: 1
@@ -489,7 +489,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565239568964032}
   m_LocalRotation: {x: -0, y: 0.19063587, z: -0, w: 0.98166084}
-  m_LocalPosition: {x: -11.989296, y: -0.9100001, z: -1.030407}
+  m_LocalPosition: {x: -11.72, y: -1.045, z: -1.18}
   m_LocalScale: {x: 0.33699012, y: 0.33699, z: 0.33699012}
   m_Children: []
   m_Father: {fileID: 4643312395687170}
@@ -740,8 +740,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1414170605243198}
   m_Mesh: {fileID: 4300000, guid: b77460eda51c5e74dbc8953db8bfbc1c, type: 3}
---- !u!65 &65000677573165642
-BoxCollider:
+--- !u!64 &64045553888561016
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -749,9 +749,11 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 22.75005, y: 0.6097051, z: 32.26829}
-  m_Center: {x: -0.012266791, y: -2.393826, z: -0.050566766}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: b77460eda51c5e74dbc8953db8bfbc1c, type: 3}
 --- !u!95 &95151565940936540
 Animator:
   serializedVersion: 3
@@ -761,23 +763,6 @@ Animator:
   m_GameObject: {fileID: 1691223416351180}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: c21a64554135e484389e5b536587022b, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95415398121048536
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1414170605243198}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: b77460eda51c5e74dbc8953db8bfbc1c, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -897,7 +882,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1649048196
+  randomSeed: 1626556890
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4258,7 +4243,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -108543761
+  randomSeed: 1499917314
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7619,7 +7604,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 2106032253
+  randomSeed: -760239288
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -17702,7 +17687,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1395038017
+  randomSeed: -1642517263
   InitialModule:
     serializedVersion: 3
     enabled: 1
