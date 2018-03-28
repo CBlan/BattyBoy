@@ -163,12 +163,14 @@ public class ScoreManager : MonoBehaviour
         {
             rank = 2;
         }
-        if(playerScore > rankValue[1])
+        if(playerScore > rankValue[1] && playerScore < rankValue[2])
         {
             rank = 3;
         }
-
-
+        if (playerScore > rankValue[2])
+        {
+            rank = 4;
+        }
     }
 
 

@@ -55,6 +55,11 @@ public class BatSwing : MonoBehaviour
             BatSwingPower = swingStrengths[2];
             flameEmit.rateOverTime = 500;
         }
+        if (ScoreManager.instance.rank == 4)
+        {
+            BatSwingPower = swingStrengths[3];
+            flameEmit.rateOverTime = 1000;
+        }
     }
 
     private void FixedUpdate()
@@ -81,7 +86,7 @@ public class BatSwing : MonoBehaviour
                         crossHair.sprite = canHitImage;
                     }
 
-                    else if (ScoreManager.instance.rank == 3)
+                    else if (ScoreManager.instance.rank >= 3)
                     {
                         crossHair.sprite = canHitImage;
                     }
@@ -181,7 +186,7 @@ public class BatSwing : MonoBehaviour
                         }
                     }
 
-                    if (ScoreManager.instance.rank == 3)
+                    if (ScoreManager.instance.rank >= 3)
                     {
                         HitOtherObject(hitObject);
                         //print("can hit heavy object");
