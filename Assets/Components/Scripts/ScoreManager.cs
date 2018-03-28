@@ -70,26 +70,26 @@ public class ScoreManager : MonoBehaviour
 
     public void GameOver()
     {
-        resultsText.text = "You've managed to destroy $" + playerScore + " worth of items.";
+        resultsText.text = "You've managed to destroy <color=green>$" + playerScore + "</color> worth of items.";
 
 
         if (gradeValue.Length > 0)
         {
             if (grade == 0)
             {
-                gradeText.text = "Rank: D-!";
+                gradeText.text = "Rank: <color=red>D- !</color>";
             }
             if (grade == 1)
             {
-                gradeText.text = "Rank: C!";
+                gradeText.text = "Rank: <color=orange>C !</color>";
             }
             if (grade == 2)
             {
-                gradeText.text = "Rank: B!";
+                gradeText.text = "Rank: <color=yellow>B !</color>";
             }
             if (grade == 3)
             {
-                gradeText.text = "Rank: A+!";
+                gradeText.text = "Rank: <color=green>A+ !</color>";
             }
 
 
