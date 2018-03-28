@@ -52,17 +52,52 @@ public class ScoreManager : MonoBehaviour
 
         if(gradeValue[0] <= playerScore)
         {
-            grade = 1;
+            grade = 0;
 
             if (gradeValue[1] <= playerScore)
             {
-                grade = 2;
+                grade = 1;
 
                 if (gradeValue[2] <= playerScore)
                 {
-                    grade = 3;
-                }
+                    grade = 2;
 
+                    if (gradeValue[3] <= playerScore)
+                    {
+                        grade = 3;
+
+                        if (gradeValue[4] <= playerScore)
+                        {
+                            grade = 4;
+
+                            if (gradeValue[5] <= playerScore)
+                            {
+                                grade = 5;
+
+                                if (gradeValue[6] <= playerScore)
+                                {
+                                    grade = 6;
+
+                                    if (gradeValue[7] <= playerScore)
+                                    {
+                                        grade = 7;
+
+                                        if(gradeValue[8] <= playerScore)
+                                        {
+                                            grade = 8;
+
+                                            if (gradeValue[9] <= playerScore)
+                                            {
+                                                grade = 9;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+             
             }
             
         }
@@ -77,22 +112,44 @@ public class ScoreManager : MonoBehaviour
         {
             if (grade == 0)
             {
-                gradeText.text = "Rank: <color=red>D- !</color>";
+                gradeText.text = "Rank: <color=red>C- !</color>";
             }
             if (grade == 1)
             {
-                gradeText.text = "Rank: <color=orange>C !</color>";
+                gradeText.text = "Rank: <color=red>C !</color>";
             }
             if (grade == 2)
             {
-                gradeText.text = "Rank: <color=yellow>B !</color>";
+                gradeText.text = "Rank: <color=red>C+ !</color>";
             }
             if (grade == 3)
             {
+                gradeText.text = "Rank: <color=yellow>B- !</color>";
+            }
+            if (grade == 4)
+            {
+                gradeText.text = "Rank: <color=yellow>B !</color>";
+            }
+            if (grade == 5)
+            {
+                gradeText.text = "Rank: <color=yellow>B+ !</color>";
+            }
+            if (grade == 6)
+            {
+                gradeText.text = "Rank: <color=green>A- !</color>";
+            }
+            if (grade == 7)
+            {
+                gradeText.text = "Rank: <color=green>A !</color>";
+            }
+            if (grade == 8)
+            {
                 gradeText.text = "Rank: <color=green>A+ !</color>";
             }
-
-
+            if (grade == 9)
+            {
+                gradeText.text = "Rank: <color=green>S !</color>";
+            }
         }
         
 
