@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using Fabric;
 
 public class BatSwing : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class BatSwing : MonoBehaviour
     public Image crossHair;
 
     public GameObject hitEffect;
-
+    private bool flameActive;
 
     bool Swinging;
 
@@ -49,6 +50,11 @@ public class BatSwing : MonoBehaviour
         {
             BatSwingPower = swingStrengths[1];
             flameEmit.rateOverTime = 50;
+            if (!flameActive)
+            {
+                flameActive = true;
+                Fabric.EventManager.Instance.PostEvent("Player/Flame");
+            }
         }
         if (ScoreManager.instance.rank == 3)
         {
@@ -206,6 +212,7 @@ public class BatSwing : MonoBehaviour
             }
 
             anim.SetTrigger("HitTrigger");
+            Fabric.EventManager.Instance.PostEvent("Player/Swing");
 
         }
     }
@@ -213,6 +220,7 @@ public class BatSwing : MonoBehaviour
     void HitOtherObject(GameObject thing)
     {
         Instantiate(hitEffect, thing.transform.position, Quaternion.identity);
+        Fabric.EventManager.Instance.PostEvent("Player/Hit");
         thing.gameObject.GetComponent<ObjectHitScore>().beenHit = true;
         thing.gameObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * BatSwingPower, ForceMode.Impulse);
         thing.gameObject.GetComponent<ObjectHitScore>().ScoreAndDestroy();

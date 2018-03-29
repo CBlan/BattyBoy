@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fabric;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class ScoreManager : MonoBehaviour
         rank = 1;
         instance = this;
         scoreText.text = "Score: " + playerScore.ToString();
+        Fabric.EventManager.Instance.PostEvent("BackgroundMusic", gameObject);
     }
 
     public void Update()
