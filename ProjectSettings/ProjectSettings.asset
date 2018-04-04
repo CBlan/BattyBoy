@@ -11,7 +11,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: The Battiest Boys
   productName: BattyBoy
   defaultCursor: {fileID: 2800000, guid: 664fd4e69efb7f94a89fff01b5457021, type: 3}
   cursorHotspot: {x: 0, y: 0}
