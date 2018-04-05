@@ -7,14 +7,15 @@ public class PauseManager : MonoBehaviour
 {
     public KeyCode pauseButton;
     public GameObject pausePanel;
-    public bool paused;
+    public bool paused = false;
 
     public static PauseManager instance;
 
     private void Start()
     {
         instance = this;
-
+        Cursor.visible = paused;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Update()
@@ -30,15 +31,16 @@ public class PauseManager : MonoBehaviour
         paused = !paused;
         pausePanel.SetActive(paused);
 
+        Cursor.visible = paused;
+
         if (paused)
         {
-            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
         }
         else
         {
-            Cursor.visible = false;
+
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1f;
         }
