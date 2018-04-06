@@ -89,6 +89,7 @@ public class ObjectHitScore : MonoBehaviour
         //{
         //    Fabric.EventManager.Instance.PostEvent("Hit/Large");
         //}
+        ScoreManager.instance.objectsCleared++;
         Destroy(gameObject);
     }
 

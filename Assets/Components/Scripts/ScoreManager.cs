@@ -6,6 +6,7 @@ using Fabric;
 
 public class ScoreManager : MonoBehaviour
 {
+    public int objectsCleared;
     //Score values
     public int playerScore;
     public int rank;
@@ -22,7 +23,10 @@ public class ScoreManager : MonoBehaviour
     //Managers
     public static ScoreManager instance;
 
-
+    private void Awake()
+    {
+        UnityEngine.Analytics.AnalyticsEvent.GameStart();
+    }
 
     public void Start()
     {
@@ -153,10 +157,10 @@ public class ScoreManager : MonoBehaviour
                 gradeText.text = "Rank: <color=green>S !</color>";
             }
         }
-        
 
 
 
+        UnityEngine.Analytics.AnalyticsEvent.GameOver();
     }
 
     public void RankUp()
@@ -175,5 +179,12 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-
+    private void OnApplicationQuit()
+    {
+        UnityEngine.Analytics.AnalyticsEvent.Custom("Game Quit", new Dictionary<string, object>
+        {
+            {"Player Score", playerScore },
+            {"Objects Cleared", objectsCleared}
+        });
+    }
 }
